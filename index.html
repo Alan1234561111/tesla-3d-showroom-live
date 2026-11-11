@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101214">
+  <meta name="description" content="在 FORM STUDIO 探索五款 Tesla 的造型與光影。旋轉 3D 車身、切換棚燈與塗裝，並肩比較美規車型。">
+  <title>FORM STUDIO — Tesla 3D 車型展廳</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="font" type="font/woff2" href="./vendor/dm-sans.woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip">跳到主要內容</a>
+  <header class="masthead">
+    <div class="mast-inner">
+      <a class="brand" href="#showroom/s" aria-label="FORM STUDIO 展示間首頁">
+        <svg class="brand-mark" aria-hidden="true" viewBox="0 0 36 28"><path fill="currentColor" d="m1.5 25 10-22h24L33 8.8H16.4L9 25zm14.7-13h14.1l-2.7 5.8H13.6z"/></svg>
+        <span>FORM<span class="brand-light">STUDIO</span></span>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a data-nav="showroom" href="#showroom/s">展示間</a>
+        <a data-nav="catalog" href="#catalog/s">車型圖鑑</a>
+        <a data-nav="compare" href="#compare/s/3">規格比較</a>
+      </nav>
+      <button id="fullscreen" class="full-toggle" type="button"><span class="full-icon"></span><span class="full-label">全螢幕</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><noscript>請啟用 JavaScript 以使用互動車型展廳。</noscript></main>
+  <footer class="footer"><div class="footer-inner"><span class="footer-word">FORM STUDIO <span>/</span> <span>TESLA COLLECTION</span></span><button type="button" data-action="credits">資料與授權 <span aria-hidden="true">↗</span></button></div></footer>
+  <dialog id="credits-dialog" class="credits-dialog" aria-labelledby="credits-title">
+    <div class="dialog-bar"><span class="micro accent">FORM STUDIO</span><button type="button" class="icon-btn" data-action="close-credits" aria-label="關閉資料與授權">×</button></div>
+    <h2 id="credits-title">資料與授權</h2>
+    <p>這是獨立製作的 Tesla 車型展覽。各車系以一款美規配置作為比較基準，續航依 EPA 英里數換算公里。</p>
+    <p>五幅風景主視覺由 ImageGen 生成。即時 3D 模型展示車系代表外觀，年式與攝影場景、規格版本可能不同。棚燈與塗裝為展覽效果。</p>
+    <div id="credit-links"></div>
+    <a class="credit-link" href="./vehicles/credits.html" target="_blank" rel="noopener">3D 模型作者與授權 <span aria-hidden="true">↗</span></a>
+  </dialog>
+  <p id="announcement" class="sr-only" aria-live="polite"></p>
+</body>
+</html>
